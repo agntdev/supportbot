@@ -1,0 +1,20 @@
+[
+  {
+    "name": "/tickets",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "List open tickets with filters"
+            }
+          }
+        ],
+        "send": {
+          "text": "/tickets"
+        }
+      }
+    ]
+  }
+]
