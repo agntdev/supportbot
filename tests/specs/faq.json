@@ -1,0 +1,20 @@
+[
+  {
+    "name": "/faq",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Manage FAQ entries (add/edit/delete)"
+            }
+          }
+        ],
+        "send": {
+          "text": "/faq"
+        }
+      }
+    ]
+  }
+]
