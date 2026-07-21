@@ -7,7 +7,35 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Initiate ticket creation flow"
+              "text": "Create a new support ticket:",
+              "reply_markup": {
+                "inline_keyboard": [
+                  [
+                    {
+                      "text": "💻 Technical issue",
+                      "callback_data": "ticket:new:tech"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "💰 Billing question",
+                      "callback_data": "ticket:new:billing"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "📋 General inquiry",
+                      "callback_data": "ticket:new:general"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "⬅️ Back to menu",
+                      "callback_data": "menu:main"
+                    }
+                  ]
+                ]
+              }
             }
           }
         ],

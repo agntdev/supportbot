@@ -7,7 +7,35 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Manage FAQ entries (add/edit/delete)"
+              "text": "FAQ management:",
+              "reply_markup": {
+                "inline_keyboard": [
+                  [
+                    {
+                      "text": "Add FAQ",
+                      "callback_data": "faq:add"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "Edit FAQ",
+                      "callback_data": "faq:edit"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "Delete FAQ",
+                      "callback_data": "faq:delete"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "⬅️ Back to menu",
+                      "callback_data": "menu:main"
+                    }
+                  ]
+                ]
+              }
             }
           }
         ],
