@@ -7,7 +7,35 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "List open tickets with filters"
+              "text": "Support tickets:",
+              "reply_markup": {
+                "inline_keyboard": [
+                  [
+                    {
+                      "text": "Open tickets",
+                      "callback_data": "tickets:open"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "Closed tickets",
+                      "callback_data": "tickets:closed"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "My tickets",
+                      "callback_data": "tickets:mine"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "⬅️ Back to menu",
+                      "callback_data": "menu:main"
+                    }
+                  ]
+                ]
+              }
             }
           }
         ],

@@ -1,4 +1,5 @@
 import { Composer } from "grammy";
+import { inlineButton, inlineKeyboard } from "../toolkit/index.js";
 
 // SCAFFOLD — generated from the bot blueprint BEFORE the agent runs.
 // Keep a LIVE registration (.command / .callbackQuery / …) so this feature is
@@ -9,7 +10,14 @@ import { Composer } from "grammy";
 const composer = new Composer();
 
 composer.command("tickets", async (ctx) => {
-  await ctx.reply("List open tickets with filters");
+  await ctx.reply("Support tickets:", {
+    reply_markup: inlineKeyboard([
+      [inlineButton("Open tickets", "tickets:open")],
+      [inlineButton("Closed tickets", "tickets:closed")],
+      [inlineButton("My tickets", "tickets:mine")],
+      [inlineButton("⬅️ Back to menu", "menu:main")],
+    ]),
+  });
 });
 
 export default composer;
